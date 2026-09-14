@@ -1,0 +1,87 @@
+ANALYST	[Pierre Parker]
+STUDENT ID	[1294094]
+DATE	[9/13/26]
+CHALLENGE NAME	[Super SSH]
+CATEGORY	[General Skills]
+DIFFICULTY	[Easy ]
+PLATFORM	CyLab Security Academy
+SUBMISSION TYPE	Private Blackboard Evidence Report
+
+PRIVATE SUBMISSION NOTICE
+This version may include the captured flag, exact terminal output, and full screenshots. Do not upload this document to a public GitHub repository.
+
+1. Purpose
+Describe what this evidence report documents and the general methodology you used. State the security concept being practiced and the goal of the challenge.
+[ This evidence report shows that I completed the super SSH challenge from PicoCTF 2024 and the methodology used in this challenge is SSH in the  secure shell in cylab. I plug in the details into the terminal, which was the SSH CTF-Player@titan.Picoctf.net -p 62830  and with the password I was able to grab the flag. 
+The security concept was hands on practice with  getting comfortable with using remote systems administration and encrypted command line connections over the cylab network. We practiced using SSH using password authentication on a port to capture the flag. 
+The main goal was to connecting to a remote machine over a port using SSH, which is a good skill to have for poking around and looking for hidden data.
+
+
+
+2. Scope and Environment
+Describe the authorized environment and tools available. Note whether you used the CyLab webshell, Kali Linux, CyberChef, Python, or another approved tool. Identify any challenge limits or assumptions.
+[ What I used to complete this was my computer, my home Wi-Fi,  Cylab web shell, and the information in the instructions and the tools was knowledge from the previous challenges and classes that I took. ]
+
+
+
+3. Investigation Procedure
+Document each step so that your instructor can reproduce your work. Include exact commands, relevant output, and a short explanation of why you performed each step.
+Step 1: [Boot up an instance]
+[Describe what you did, why you did it, and what the result showed.]
+[ For the first step, What I Did was start up an instance in cylab and what that does is start up a dedicated sandbox environment or it can boot up a challenge server for a account. And what it did for me what boot a challenge sever and then it generates a specific connection details I need to have to solve the problem. ]
+
+
+
+
+Step 2: [wget command line]
+[Describe what you did, why you did it, and what the result showed.]
+[I used the wget command with the picoCTF webshell URL, https://webshell.picoctf.org/. I did this to connect to the picoCTF webshell so I could start the challenge. The command connected successfully, showing that the webshell was ready to use.] 
+
+
+
+
+Step 3: [Short title]
+[Describe what you did, why you did it, and what the result showed.]
+I connected to the remote picoCTF server using the Secure Shell (SSH) protocol by running ssh ctf-player@titan.picocft.net -p 62830. After authenticating with the provided password, the server established an encrypted connection and immediately printed the challenge flag (picoCTF{s3cur3_c0nn3ct10n_8969f7d3}) directly to the terminal before closing the session.]
+ 
+
+
+
+
+4. Tools Used
+Tool or Command	Purpose
+My computer	School work and cylab challenge
+Wget command line	To connect to the server
+ssh ctf-player@titan.picocft.net -p 62830 command	It was used to get a password line, and then after I put in the password I get the flag
+
+5. Flag Captured
+Paste the flag exactly as it appeared after you completed the challenge. This section is for the private Blackboard submission only.
+[ ]
+
+
+[ ]
+
+
+
+
+6. Troubleshooting and Decision-Making
+Describe one obstacle you encountered. Explain what you tried first, what did not work, and how you adjusted your approach.
+[At first, I ran into a problem because I kept entering wrong details during the tying in command process, which prevented the connection to the server. Realizing that a typo or incorrect syntax was likely causing the authentication failure, I reviewed my input and I fixed the mistake. Once I re-entered the proper command, the SSH connection established successfully, and the server automatically outputted the flag directly in the terminal window before closing the session.
+
+
+
+
+7. What I Learned
+Write two to four sentences explaining the security concept you learned, how the challenge connects to the Maplewood lecture topic, and what you would do differently next time.
+[Through this challenge, I learned how secure shell (SSH) protocols handle encrypted remote communication, credential verification, and automated session management over a network. This directly connects to our lecture topics on secure administration, access controls, and protecting data while it’s being transferred or  data in  general. Next time, I will check my command lines and port numbers  right from the start to prevent  authentication typos and make sure the connection is officially connected. ]
+
+
+
+
+8. Submission Checklist
+☐ My name and student ID are included.
+☐ My procedure includes exact commands and relevant output.
+☐ My screenshots are readable and show the correct challenge.
+☐ The captured flag is included exactly as shown.
+☐ I removed passwords, tokens, personal information, and unrelated browser content.
+☐ I understand that this private evidence report must not be posted publicly.
