@@ -1,0 +1,82 @@
+ANALYST	[Pierre Parker]
+STUDENT ID	[1294094]
+DATE	[9/20/26]
+CHALLENGE NAME	[vault-door-training]
+CATEGORY	{ Forensics]
+DIFFICULTY	[Medium]
+PLATFORM	CyLab Security Academy
+SUBMISSION TYPE	Private Blackboard Evidence Report
+
+PRIVATE SUBMISSION NOTICE
+This version may include the captured flag, exact terminal output, and full screenshots. Do not upload this document to a public GitHub repository.
+
+1. Purpose
+Describe what this evidence report documents and the general methodology you used. State the security concept being practiced and the goal of the challenge.
+[This evidence report documents the investigation and forensic recovery methodology used to solve the picoCTF Enhance! challenge. The goal was do an investigation into a Scalable Vector Graphics image file to uncover hidden steganographic data and understand how sensitive text can be concealed within vector graphic metadata.]
+
+
+2. Scope and Environment
+Describe the authorized environment and tools available. Note whether you used the CyLab webshell, Kali Linux, CyberChef, Python, or another approved tool. Identify any challenge limits or assumptions.
+[The task was performed inside the Cy Lab Security Academy web shell environment. I used wget to download the target SVG file and standard Linux command-line text inspection tools (cat) to review the underlying XML structure and metadata.]
+
+
+
+3. Investigation Procedure
+Document each step so that your instructor can reproduce your work. Include exact commands, relevant output, and a short explanation of why you performed each step.
+Step 1: [wget]
+[Describe what you did, why you did it, and what the result showed.]
+ 
+To solve the Enhance challenge, I first used wget to download the target Scalable Vector Graphics artifact file directly from the challenge repository into the secure web shell environment. I performed this step to retrieve the necessary image file locally so I could inspect its contents. The download completed successfully, providing the drawing.flag.svg.1 file needed for the forensic investigation.
+
+
+
+
+Step 2: [command on the downloaded SVG file]
+[Describe what you did, why you did it, and what the result showed.]
+[For Step 2, I executed the cat command on the downloaded SVG file to inspect its raw text and XML structure. I did this because Scalable Vector Graphics files are written in plain XML text, meaning any hidden metadata, embedded notes, or text elements can be read directly by opening the file's source code. The output showed the full XML code, revealing an unexpected <text> block containing tiny, hidden tspan elements tucked away inside the vector structure.]
+ 
+
+
+
+Step 3: [t span tags]
+[Describe what you did, why you did it, and what the result showed.]
+[For Step 3, I located the text block inside the XML output and extracted the individual characters split across several tiny t span tags. I did this to reconstruct the hidden message that was made invisible on the rendered image by using a microscopic font size and white styling. Reading through each character span in sequential order successfully revealed the complete plaintext flag: picoCTF{3nh4nc3d_24374675}.]
+ 
+
+
+
+
+4. Tools Used
+Tool or Command	Purpose
+[WGET]	[Used to download the challenge artifact file directly from the remote server into the web shell environment.]
+[CAT]	[Used to read and output the raw XML contents of the SVG file directly in the terminal to inspect its text elements.]
+[TEXT INPSECTION]	[Used to review the individual t span elements and extract the hidden characters to form the flag]
+
+
+5. Flag Captured
+Paste the flag exactly as it appeared after you completed the challenge. This section is for the private Blackboard submission only.
+[picoCTF{3nh4nc3d_24374675}]
+
+
+
+6. Troubleshooting and Decision-Making
+Describe one obstacle you encountered. Explain what you tried first, what did not work, and how you adjusted your approach.
+[At first, I figured I needed some heavy photo editing tools to scan for hidden pixels  in the image. But since SVG files are actually just plain text XML documents under the hood, I switched gears and checked the source code instead, which immediately exposed the hidden text tags.]
+
+
+
+
+7. What I Learned
+Write two to four sentences explaining the security concept you learned, how the challenge connects to the Maplewood lecture topic, and what you would do differently next time.
+[This challenge showed me how steganography can be used to hide sensitive data inside  images and invisible text layers. It connects directly to our Maplewood lecture topic on metadata analysis and file structure forensics by showing why visual inspection alone isn't enough. Next time, I will skip visual edits entirely and immediately inspect the raw code structure of media files.]
+
+
+
+
+8. Submission Checklist
+☐ My name and student ID are included.
+☐ My procedure includes exact commands and relevant output.
+☐ My screenshots are readable and show the correct challenge.
+☐ The captured flag is included exactly as shown.
+☐ I removed passwords, tokens, personal information, and unrelated browser content.
+☐ I understand that this private evidence report must not be posted publicly.
