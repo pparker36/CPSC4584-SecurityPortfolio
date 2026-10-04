@@ -1,0 +1,66 @@
+Maplewood Security Team Playbook — Interencdec
+
+Course: CPSC 4584
+
+Challenge: interencdec
+
+Category: Cryptography
+
+Platform: CyLab Security Academy
+
+Portfolio Type: Public-safe GitHub playbook  
+
+1. Challenge Overview
+This challenge focused on recognizing and decoding multiple layers of encoded information. I downloaded the provided challenge file, identified Base64-encoded data, decoded more than one Base64 layer, and then recognized that the remaining text used a Caesar cipher. I used a Caesar cipher solver to test the shift and confirm the readable result.
+The main lesson from this challenge was that one successful decode does not always mean the investigation is finished. An analyst still has to inspect the new output, identify what type of data it is, and decide what technique should be used next.
+
+2. Authorized Scope
+All work was completed for the assigned CyLab Security Academy challenge in the authorized course environment. I only worked with the file provided by the challenge and used decoding tools to analyze that file. No systems, accounts, or data outside of the assigned lab were tested.
+This GitHub version is intentionally public-safe. The actual captured flag, signed challenge download URL, student information, and any sensitive values are not included here.
+
+3. Tools Used
+Tool or Command	Purpose
+1. CyLab webshell: Used to work with the challenge file in the authorized lab environment.
+2. wget: Used to download the provided enc_flag file.
+3. EMN178: Base64 Decode Tool used to decode the nested Base64 layers.
+4. The Word Finder Caesar Cipher Solver: Used to test the Caesar shift and recover readable plaintext.
+
+
+4. Investigation Procedure 
+
+Step 1 — Download the Challenge File
+I used wget in the CyLab webshell to download the file provided by the challenge.
+wget "<challenge-file-url>" -O enc_flag
+Result: The download completed successfully and the file was saved as enc_flag.
+
+
+Step 2 — Identify and Decode the Base64 Layers
+After opening the file, I found a long string that matched the common appearance of Base64 data. I copied the encoded value into the EMN178 Base64 Decode tool.
+The first decode did not produce normal plaintext. Instead, it produced another Base64-looking value. I decoded that second layer as well.
+Sanitized decoded-content:
+First decode: another Base64-encoded value
+Second decode: Caesar-cipher text
+
+Step 3 — Solve the Caesar Cipher
+The second Base64 decode produced text that was readable in structure but still had shifted letters. That was a clue that the next layer was a Caesar cipher.
+I copied only the ciphertext into The Word Finder Caesar Cipher Solver and tested the shift values until the text became readable and matched the expected challenge flag format.
+Public result:
+
+Challenge successfully solved.
+
+Final flag: [REDACTED FROM PUBLIC PORTFOLIO]
+
+5. Troubleshooting and Decision-Making
+The main issue I ran into was expecting the first Base64 decode to give me the final answer. When the result still looked encoded, I first thought the decoder may not have worked correctly. I looked at the output more closely and noticed that it still had the structure of Base64, so I decoded it again.
+After the second Base64 layer, the output looked like shifted alphabetic text instead of another Base64 string. That change helped me decide to stop using the Base64 decoder and move to a Caesar cipher solver. This made the process more systematic instead of repeatedly trying the same tool.
+
+
+6. Security Takeaway
+This challenge showed me why analysts need to recognize different forms of encoding and basic cryptography. Data can be wrapped in several layers, and each layer can require a different tool or method.
+It also reinforced the importance of separating evidence from terminal prompts and other unrelated text. When documenting an investigation, the actual decoded content should be clearly labeled so another person can tell what came from the evidence and what came from the command-line environment.
+
+
+7. What I Learned
+I learned that decoding can involve multiple layers, so I should not assume the first successful conversion is the final answer. I also got better at recognizing the difference between Base64-encoded data and Caesar-cipher text.
+For future investigations, I would inspect and label each output before moving to the next step. I would also make sure my GitHub evidence is sanitized and stored in the correct portfolio folder before publishing it.
+Public-Safety Check
