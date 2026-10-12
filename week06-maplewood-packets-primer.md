@@ -83,7 +83,3 @@ This challenge connects to network forensics because it shows that packet captur
 ## 7. What I Learned
 
 I learned how to download and inspect a `.pcap` file using Linux commands. The biggest lesson for me was not to assume that every flag follows the same format. Next time, I would inspect the readable content first and use filters based on what I actually find. I would also use Wireshark if I needed to examine individual packets or network protocols in more detail.
-
-## 8. Public-Safe Documentation Note
-
-This playbook is for a public GitHub portfolio. The actual flag, any private challenge download URL, and detailed completion evidence belong in the separate private Blackboard submission. The screenshots and terminal output from this exercise showed a candidate flag, but this playbook does not claim a successful platform submission without a confirmation screenshot.
