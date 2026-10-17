@@ -1,7 +1,7 @@
 # Week 7: Network Traffic Anomaly During Night Shift
 
 **Course:** CPSC 4584 | Special Topics in Information Security  
-**Date:** October 12, 2026  
+**Date:** October 16, 2026  
 **Analyst:** Pierre Parker  
 **Case ID:** NET-2026-1012-001 (related: FOR-2026-1005-001)
 
