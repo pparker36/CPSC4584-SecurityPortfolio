@@ -44,7 +44,3 @@ At first, I searched the capture for the flag text in the Webshell, but nothing 
 ## What I Learned
 
 This challenge helped me get more comfortable filtering packets and following TCP streams in Wireshark. It also connected to our Maplewood network analysis work because both involve looking for unusual details in traffic. I learned that ROT13 can make text look hidden, but it isn't real encryption. Next time, I'd start with protocol and display filters earlier to save time.
-
-## Public Sharing Note
-
-This playbook only explains my general process. It does **not** include the captured flag, complete decoded message, private evidence report, challenge screenshots, student ID, or sensitive information. The full evidence was kept for the private Blackboard submission.
