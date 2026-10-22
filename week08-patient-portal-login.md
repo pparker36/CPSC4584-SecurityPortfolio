@@ -1,6 +1,6 @@
 # Week 8: Patient Portal Login Page Behaving Strangely
 **Course:** CPSC 4584 | Special Topics in Information Security  
-**Date:** October 19, 2026  
+**Date:** October 22, 2026  
 **Analyst:** Pierre Parker  
 **Case ID:** WEB-2026-1019-001
 
