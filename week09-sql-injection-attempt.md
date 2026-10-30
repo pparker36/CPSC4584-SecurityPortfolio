@@ -1,7 +1,7 @@
 # Week 9: SQL Injection Attempt on Appointment Scheduling System
 
 **Course:** CPSC 4584 | Special Topics in Information Security  
-**Date:** October 26, 2026  
+**Date:** October 30, 2026  
 **Analyst:** Pierre Parker  
 **Case ID:** SQLI-2026-1024-001
 
