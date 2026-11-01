@@ -7,7 +7,6 @@
 **Difficulty:** Easy  
 **Platform:** CyLab Security Academy  
 
-> **GitHub version:** This is a public-friendly write-up. I left out the challenge flag, my student ID, and private submission screenshots. My full evidence report is for Blackboard only.
 
 ## 1. Purpose
 
