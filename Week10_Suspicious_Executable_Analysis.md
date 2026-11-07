@@ -1,7 +1,7 @@
 # Week 10: Suspicious Executable Running on a Server
 
 **Course:** CPSC 4584 | Special Topics in Information Security  
-**Date:** November 2, 2026  
+**Date:** November 7, 2026  
 **Analyst:** Pierre Parker  
 **Case ID:** EXEC-2026-1030-001
 
